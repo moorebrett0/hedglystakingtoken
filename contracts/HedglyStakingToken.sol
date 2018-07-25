@@ -12,5 +12,11 @@ pragma solidity ^0.4.24;
      string public name = "Hedgly Staking Token";
      string public symbol = "HST";
      uint8 public decimals = 18;
-     uint8 public maxsupply = 10000000000;
+     uint8 public INITIAL_SUPPLY = 100000000;
  }
+
+ function HedglyStakingToken() {
+     totalSupply = INITIAL_SUPPLY;
+     balances[msg.sender] = INITIAL_SUPPLY;
+     }
+}
